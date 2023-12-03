@@ -1,0 +1,17 @@
+
+.aktiviteler label {
+    display: block;
+   display: flex;
+   justify-content: flex-start;
+   
+   
+}
+
+.aktiviteler button {
+    margin: 10px 0px 0px 0px;
+}
+
+#sonuc {
+   display: flex ;
+   justify-content: flex-start;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="aktiviteler">
+        <label><input type="checkbox" name="activity" value="seyahat"> Seyahat</label>
+        <label><input type="checkbox" name="activity" value="yemek"> Yemek</label>
+        <label><input type="checkbox" name="activity" value="spor"> Spor</label>
+        <label><input type="checkbox" name="activity" value="sinema"> Sinema</label>
+        <label><input type="checkbox" name="activity" value="fitness"> Fitness</label>
+    
+        <button type="button" onclick="KaydetBtn()">Kaydet</button>
+    </div>
+    
+    <p id="sonuc"></p>
+    
+    <script>
+        function KaydetBtn() {
+            let aktivitelers = document.getElementsByClassName("aktiviteler")[0];
+            let checkboxes = aktivitelers.querySelectorAll('input[name="activity"]:checked');
+    
+            let sonucholder = "";
+            for (let i = 0; i < checkboxes.length; i++) {
+                sonucholder += checkboxes[i].value;
+                if (i < checkboxes.length - 1) {
+                    sonucholder += ', ';
+                }
+            }
+    
+            var sonucholderElement=document.getElementById("sonuc");
+            sonucholderElement.innerHTML=sonucholder;
+        }
+        
+    </script>
+
+</body>
+</html>
